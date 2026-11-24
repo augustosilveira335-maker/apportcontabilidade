@@ -601,3 +601,9 @@ section:not(.escuro):not(.meio) .pilares p{color:var(--tinta2)}
 .faixa-foto::before{content:"";position:absolute;inset:auto 0 0 0;height:60%;background:linear-gradient(transparent,rgba(0,20,63,.6));z-index:1;pointer-events:none}
 .praca .cc{text-transform:uppercase}
 .praca p{overflow-wrap:anywhere}
+/* "Área do cliente" no menu (24/11/2026): só no menu do celular. No computador, 8 itens + Fale conosco não cabem
+   na coluna de 1320 px em largura nenhuma (medido em 1081 a 1920); lá o acesso fica no rodapé e nos botões "Já sou cliente". */
+@media(min-width:1081px){.menu a.m-cliente{display:none}}
+/* o menu compacto valia só até 1280 px; entre 1281 e ~1340 o Fale conosco passava da coluna (e da tela em 1281) */
+@media(min-width:1281px) and (max-width:1360px){.menu{gap:20px}.menu a{letter-spacing:.1em}.topo .c{gap:22px}}
+@media(min-width:1081px) and (max-width:1239px){.topo .bt{display:none}}
